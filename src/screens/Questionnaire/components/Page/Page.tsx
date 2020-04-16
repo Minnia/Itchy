@@ -5,6 +5,8 @@ import Button from '../../../../components/common/Button';
 import {View, Dimensions} from 'react-native';
 import {store} from '../../../../redux/store';
 import * as actions from '../../../../redux/actions';
+import layout from '../../../../theme/layout';
+import theme from '../../../../theme';
 
 type Choice = {
   choice: string;
@@ -28,8 +30,6 @@ const Page: FunctionComponent<Props> = ({
   onPress,
   isFollowUpQuestion = false,
 }) => {
-  const height = Dimensions.get('window').height;
-  const width = Dimensions.get('window').width;
   return (
     <>
       <QuestionTitle>{`Fråga ${activeIndex} ${
@@ -39,8 +39,8 @@ const Page: FunctionComponent<Props> = ({
       <View
         style={{
           justifyContent: 'center',
-          height: height * 0.5,
-          width,
+          height: layout.height * 0.5,
+          width: layout.width,
         }}>
         {buttons.map(({choice, value}, i) => {
           const submitAnswer = () => {

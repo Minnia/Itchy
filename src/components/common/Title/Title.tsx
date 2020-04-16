@@ -1,5 +1,6 @@
 import React, {FunctionComponent} from 'react';
 import {Text} from 'react-native';
+import theme from '../../../theme';
 
 type OwnProps = {
   title: string;
@@ -16,6 +17,7 @@ const Title: FunctionComponent<Props> = ({title}) => {
         color: 'white',
         textAlign: 'center',
         marginBottom: 8,
+        fontFamily: theme.fonts.PoppinsBold,
       }}>
       {title}
     </Text>

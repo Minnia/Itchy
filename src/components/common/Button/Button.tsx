@@ -1,6 +1,7 @@
 import React, {FunctionComponent} from 'react';
-import {Button as RNButton, View, Dimensions, Text} from 'react-native';
+import {Button as RNButton, View, Text} from 'react-native';
 import {ButtonView} from './styled';
+import theme from '../../../theme';
 
 type OwnProps = {
   title: string;
@@ -42,6 +43,7 @@ const Button: FunctionComponent<Props> = ({title, onPress}) => {
       />
       <Text
         style={{
+          fontFamily: theme.fonts.PoppinsBold,
           color: 'white',
           fontWeight: 'bold',
           top: height * 0.5 - 16 * 0.5,
