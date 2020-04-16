@@ -18,6 +18,8 @@
 		2DCD954D1E0B4F2C00145EB5 /* itchyProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* itchyProjectTests.m */; };
 		6723D34B3503E3E47148926D /* libPods-itchyProject-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DF09B6A7FF90998C76A6C2 /* libPods-itchyProject-tvOS.a */; };
 		98743A88BC7F349E0A70BA2F /* libPods-itchyProject-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC1B1E373F13DEF1DD685DE /* libPods-itchyProject-tvOSTests.a */; };
+		DC4C96442448F24D00B87CFE /* Corben-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC4C96432448F24C00B87CFE /* Corben-Bold.ttf */; };
+		DC4C96462448F26100B87CFE /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC4C96452448F26100B87CFE /* Poppins-Bold.ttf */; };
 		FA861235B99278DA9603518D /* libPods-itchyProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 505C2BBD07D724BC66772EA6 /* libPods-itchyProject.a */; };
 		FB464F93B1E86FF31931FDE8 /* libPods-itchyProject-itchyProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E88A82541F7C56077E17DA /* libPods-itchyProject-itchyProjectTests.a */; };
 /* End PBXBuildFile section */
@@ -65,6 +67,8 @@
 		805B830C20680EFAA73944C3 /* Pods-itchyProject-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itchyProject-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-itchyProject-tvOS/Pods-itchyProject-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		940D7175856FCE6FC63BB69F /* Pods-itchyProject-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itchyProject-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-itchyProject-tvOSTests/Pods-itchyProject-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		CAC1B1E373F13DEF1DD685DE /* libPods-itchyProject-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-itchyProject-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC4C96432448F24C00B87CFE /* Corben-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Corben-Bold.ttf"; path = "../../../../Downloads/Corben/Corben-Bold.ttf"; sourceTree = "<group>"; };
+		DC4C96452448F26100B87CFE /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "../../../../Downloads/Poppins/Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -131,6 +135,8 @@
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
+				DC4C96452448F26100B87CFE /* Poppins-Bold.ttf */,
+				DC4C96432448F24C00B87CFE /* Corben-Bold.ttf */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = itchyProject;
@@ -194,7 +200,6 @@
 				152D3D2F626C8697A1A135DE /* Pods-itchyProject-tvOSTests.debug.xcconfig */,
 				940D7175856FCE6FC63BB69F /* Pods-itchyProject-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -338,8 +343,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC4C96442448F24D00B87CFE /* Corben-Bold.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				DC4C96462448F26100B87CFE /* Poppins-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

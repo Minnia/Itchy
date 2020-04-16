@@ -9,7 +9,14 @@ type Props = OwnProps;
 
 const Title: FunctionComponent<Props> = ({title}) => {
   return (
-    <Text style={{fontSize: 18, color: 'white', textAlign: 'center'}}>
+    <Text
+      style={{
+        fontSize: 15,
+        fontWeight: 'bold',
+        color: 'white',
+        textAlign: 'center',
+        marginBottom: 8,
+      }}>
       {title}
     </Text>
   );

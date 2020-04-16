@@ -1,0 +1,13 @@
+{
+  "primary": {
+    "color": "#bcc6ff",
+    "onColor": "#8494ED"
+  },
+  "secondary": {
+    "color": "#ffffff",
+    "onColor": "#ffffff"
+  },
+  "error": "#ed4337",
+  "success": "#53a653",
+  "border_color": "#ffffff"
+}

@@ -1,12 +1,15 @@
 import styled from 'styled-components';
-import {View} from 'react-native';
+import {TouchableOpacity} from 'react-native';
 
-export const ButtonView = styled(View)`
+export const ButtonView = styled(TouchableOpacity)<{
+  width: number;
+  height: number;
+  borderRadius: number;
+}>`
   align-self: center;
   justify-content: center;
-  background-color: #bcc6ff;
-  width: 330px;
-  height: 50px;
-  border-radius: 50px;
+  width: ${({width}) => width}px;
+  height: ${({height}) => height}px;
+  border-radius: ${({borderRadius}) => borderRadius}px;
   margin-bottom: 8px;
 `;

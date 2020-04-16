@@ -1,11 +1,8 @@
-import {GET_QUESTIONS_SUCCESS, NEXT_QUESTION, PREVIOUS_QUESTION} from './types';
+import {NEXT_QUESTION, PREVIOUS_QUESTION, SUBMIT_QUESTION} from './types';
 
-export const getQuestions = () => ({
-  type: GET_QUESTIONS_SUCCESS,
-  request: {
-    url: '/questions',
-    request: 'GET',
-  },
+export const submitAnswer = ({index, value}) => ({
+  type: SUBMIT_QUESTION,
+  payload: {index, value},
 });
 
 export const goForward = () => ({

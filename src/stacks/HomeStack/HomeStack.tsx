@@ -12,7 +12,6 @@ const HomeStack = () => {
         name={screens.PageOneScreen}
         component={PageOneScreen}
       />
-      <Stack.Screen name={screens.PageTwoScreen} component={PageTwoScreen} />
     </Stack.Navigator>
   );
 };

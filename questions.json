@@ -3,67 +3,117 @@
     {
       "questionNumber": 1,
       "questionText": "Hur mycket har din hud kliat, svidit, bränt och stuckit under den senaste veckan?",
-      "choices": ["Väldigt mycket", "En hel del", "Lite grann", "Inte alls"],
+      "choices": [
+        {"choice": "Väldigt mycket", "value": 3},
+        {"choice": "En hel del", "value": 2},
+        {"choice": "Lite grann", "value": 1},
+        {"choice": "Inte alls", "value": 0}
+      ],
       "applicable": false
     },
     {
       "questionNumber": 2,
       "questionText": "Hur generad eller osäker på Dig själv har du varit på grund av din hud under den senaste veckan?",
-      "choices": ["Väldigt mycket", "En hel del", "Lite grann", "Inte alls"],
+      "choices": [
+        {"choice": "Väldigt mycket", "value": 3},
+        {"choice": "En hel del", "value": 2},
+        {"choice": "Lite grann", "value": 1},
+        {"choice": "Inte alls", "value": 0}
+      ],
       "applicable": false
     },
     {
       "questionNumber": 3,
       "questionText": "Hur mycket har din hud hindrat dig från att gå och handla, sköta ditt hem eller trädgård under den senaste veckan?",
-      "choices": ["Väldigt mycket", "En hel del", "Lite grann", "Inte alls"],
+      "choices": [
+        {"choice": "Väldigt mycket", "value": 3},
+        {"choice": "En hel del", "value": 2},
+        {"choice": "Lite grann", "value": 1},
+        {"choice": "Inte alls", "value": 0}
+      ],
       "applicable": true
     },
     {
       "questionNumber": 4,
       "questionText": "Hur mycket har din hud inverkat på din klädsel under den senaste veckan?",
-      "choices": ["Väldigt mycket", "En hel del", "Lite grann", "Inte alls"],
+      "choices": [
+        {"choice": "Väldigt mycket", "value": 3},
+        {"choice": "En hel del", "value": 2},
+        {"choice": "Lite grann", "value": 1},
+        {"choice": "Inte alls", "value": 0}
+      ],
       "applicable": true
     },
     {
       "questionNumber": 5,
       "questionText": "Hur mycket har din hud påverkat sociala aktiviteter eller fritidsaktiviteter under den senaste veckan?",
-      "choices": ["Väldigt mycket", "En hel del", "Lite grann", "Inte alls"],
+      "choices": [
+        {"choice": "Väldigt mycket", "value": 3},
+        {"choice": "En hel del", "value": 2},
+        {"choice": "Lite grann", "value": 1},
+        {"choice": "Inte alls", "value": 0}
+      ],
       "applicable": true
     },
     {
       "questionNumber": 6,
       "questionText": "Hur mycket har din hud förhindrat dig att utöva sport under den senaste veckan?",
-      "choices": ["Väldigt mycket", "En hel del", "Lite grann", "Inte alls"],
+      "choices": [
+        {"choice": "Väldigt mycket", "value": 3},
+        {"choice": "En hel del", "value": 2},
+        {"choice": "Lite grann", "value": 1},
+        {"choice": "Inte alls", "value": 0}
+      ],
       "applicable": true
     },
     {
       "questionNumber": 7,
       "questionText": "Har din hud förhindrat dig att arbeta eller studera under den senaste veckan?",
-      "choices": ["Ja", "Nej"],
-      "applicable": true
+      "choices": [{"choice": "Ja", "value": 3}, {"choice": "Nej"}],
+      "applicable": true,
+      "followUpQuestion": {
+        "questionText": "Hur mycket har din hud varit ett problem under arbetet eller studierna?",
+        "choiceIndex": 1,
+        "choices": [
+          {"choice": "Väldigt mycket", "value": 3},
+          {"choice": "En hel del", "value": 2},
+          {"choice": "Lite grann", "value": 1},
+          {"choice": "Inte alls", "value": 0}
+        ],
+        "applicable": true
+      }
     },
     {
       "questionNumber": 8,
-      "questionText": "Hur mycket har din hud varit ett problem under arbetet eller studierna?",
-      "choices": ["Väldigt mycket", "En hel del", "Lite grann", "Inte alls"],
+      "questionText": "Hur mycket problem har din hud förorsakat dig i relationen med din partner eller någon av dina nära vänner eller släktingar under den senaste veckan?",
+      "choices": [
+        {"choice": "Väldigt mycket", "value": 3},
+        {"choice": "En hel del", "value": 2},
+        {"choice": "Lite grann", "value": 1},
+        {"choice": "Inte alls", "value": 0}
+      ],
       "applicable": true
     },
     {
       "questionNumber": 9,
-      "questionText": "Hur mycket problem har din hud förorsakat dig i relationen med din partner eller någon av dina nära vänner eller släktingar under den senaste veckan?",
-      "choices": ["Väldigt mycket", "En hel del", "Lite grann", "Inte alls"],
+      "questionText": "Hur mycket sexuella svårigheter eller problem har din hud orsakat under den senaste veckan?",
+      "choices": [
+        {"choice": "Väldigt mycket", "value": 3},
+        {"choice": "En hel del", "value": 2},
+        {"choice": "Lite grann", "value": 1},
+        {"choice": "Inte alls", "value": 0}
+      ],
       "applicable": true
     },
     {
       "questionNumber": 10,
-      "questionText": "Hur mycket sexuella svårigheter eller problem har din hud orsakat under den senaste veckan?",
-      "choices": ["Väldigt mycket", "En hel del", "Lite grann", "Inte alls"],
-      "applicable": true
-    },
-    {
-      "questionNumber": 11,
       "questionText": "Hur mycket problem har behandlingen av din hud givit, till exempel genom att stöka till hemma eller ta upp tid under den senaste veckan?",
-      "choices": ["Väldigt mycket", "En hel del", "Lite grann", "Inte alls"],
+      "choices": [
+        {"choice": "Väldigt mycket", "value": 3},
+        {"choice": "En hel del", "value": 2},
+        {"choice": "Lite grann", "value": 1},
+        {"choice": "Inte alls", "value": 0}
+      ],
       "applicable": true
     }
   ]

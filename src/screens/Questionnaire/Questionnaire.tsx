@@ -1,69 +1,90 @@
-import React, {useState, FunctionComponent} from 'react';
+import React, {useState, useEffect} from 'react';
 import Title from '../../components/common/Title';
 import form from '../../../questions.json';
-import {View, Dimensions, Text} from 'react-native';
+import {View, Dimensions} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Page from './components/Page';
-import {store} from '../../redux/store';
-import * as actions from '../../redux/actions';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import {Paragraph} from '../../components/common/styled';
+import AnimatedBackground from './components/Page/AnimatedBackground';
 
 const PageOneScreen = () => {
   const height = Dimensions.get('window').height;
   const width = Dimensions.get('window').width;
+
   const [activeIndex, setActiveIndex] = useState(0);
+  const [hasFollowUpQuestion, setFollowUpQuestion] = useState(false);
+  const [shouldShowFollowUpQuestion, setShowFollowUpQuestion] = useState(false);
+  const question = form.questions[activeIndex];
+  const followUpQuestion =
+    form.questions[activeIndex].followUpQuestion &&
+    form.questions[activeIndex].followUpQuestion;
 
-  // const test = () => {
-  //   try {
-  //     store.dispatch(actions.question.goForward());
-  //     console.log('test');
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
+  useEffect(() => {
+    setFollowUpQuestion(!!followUpQuestion);
+  }, [activeIndex]);
 
-  const handlePress = () => {
+  const handlePress = (buttonIndex: number) => {
+    if (
+      hasFollowUpQuestion &&
+      buttonIndex === followUpQuestion.choiceIndex &&
+      !shouldShowFollowUpQuestion
+    ) {
+      return setShowFollowUpQuestion(true);
+    } else {
+      setShowFollowUpQuestion(false);
+    }
+
     if (activeIndex + 1 >= form.questions.length) {
       return;
     }
-    // if (activeIndex === 6 && buttonIndex === 0) {
-    //   console.log('7th question');
-    // }
-    // else if(activeIndex === 6 && buttonIndex === 1){
-    //   console.log("another choice")
-    // }
-    form.questions[activeIndex].choices.map((choice, i) =>
-      console.log(choice, i),
-    );
     setActiveIndex(activeIndex + 1);
   };
-
   return (
-    <SafeAreaView style={{backgroundColor: '#bcc6ff'}}>
-      <View style={{backgroundColor: '#bcc6ff', height, width}}>
-        <Title title="Välmående DLQI" />
-        <Page
-          onPress={handlePress}
-          activeIndex={activeIndex + 1}
-          question={form.questions[activeIndex].questionText}
-          buttons={form.questions[activeIndex].choices}
-        />
-        {form.questions[activeIndex].applicable ? (
-          <TouchableOpacity>
-            <Text
-              style={{
-                color: 'white',
-                fontWeight: 'bold',
-                textAlign: 'center',
-                fontSize: 18,
-                paddingTop: 8,
-              }}>
-              Ej tillämpligt
-            </Text>
-          </TouchableOpacity>
-        ) : null}
+    <>
+      <View style={{flexDirection: 'row', position: 'relative', width, height}}>
+        <SafeAreaView
+          style={{
+            zIndex: 3,
+            position: 'absolute',
+          }}>
+          <View style={{height, width}}>
+            <Title title="Välmående DLQI" />
+            {shouldShowFollowUpQuestion ? (
+              <>
+                <Page
+                  isFollowUpQuestion
+                  onPress={handlePress}
+                  activeIndex={activeIndex + 1}
+                  question={followUpQuestion.questionText}
+                  buttons={followUpQuestion.choices}
+                />
+                {followUpQuestion.applicable && (
+                  <TouchableOpacity>
+                    <Paragraph>Ej tillämpligt</Paragraph>
+                  </TouchableOpacity>
+                )}
+              </>
+            ) : (
+              <>
+                <Page
+                  onPress={handlePress}
+                  activeIndex={activeIndex + 1}
+                  question={question.questionText}
+                  buttons={question.choices}
+                />
+                {question.applicable && (
+                  <TouchableOpacity>
+                    <Paragraph>Ej tillämpligt</Paragraph>
+                  </TouchableOpacity>
+                )}
+              </>
+            )}
+          </View>
+        </SafeAreaView>
+        <AnimatedBackground activeIndex={activeIndex} />
       </View>
-    </SafeAreaView>
+    </>
   );
 };
 
