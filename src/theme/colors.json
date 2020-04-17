@@ -5,9 +5,10 @@
   },
   "secondary": {
     "color": "#ffffff",
-    "onColor": "#ffffff"
+    "onColor": "#dbdbdb"
   },
   "error": "#ed4337",
   "success": "#53a653",
-  "border_color": "#ffffff"
+  "border_color": "#ffffff",
+  "shadowColor": "#dbdbdb"
 }

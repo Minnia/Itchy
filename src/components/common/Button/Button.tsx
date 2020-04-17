@@ -1,6 +1,6 @@
 import React, {FunctionComponent} from 'react';
 import {Button as RNButton, View, Text} from 'react-native';
-import {ButtonView} from './styled';
+import {ButtonView, ButtonText} from './styled';
 import theme from '../../../theme';
 
 type OwnProps = {
@@ -22,7 +22,7 @@ const Button: FunctionComponent<Props> = ({title, onPress}) => {
       borderRadius={borderRadius}
       onPress={onPress}
       style={{
-        shadowColor: '#dbdbdb',
+        shadowColor: theme.secondary.onColor,
         shadowOffset: {
           width: 0,
           height: 1,
@@ -37,21 +37,11 @@ const Button: FunctionComponent<Props> = ({title, onPress}) => {
           height,
           width,
           borderRadius,
-          backgroundColor: '#ffffff',
+          backgroundColor: theme.secondary.color,
           opacity: 0.12,
         }}
       />
-      <Text
-        style={{
-          fontFamily: theme.fonts.PoppinsBold,
-          color: 'white',
-          fontWeight: 'bold',
-          top: height * 0.5 - 16 * 0.5,
-          position: 'absolute',
-          alignSelf: 'center',
-        }}>
-        {title}
-      </Text>
+      <ButtonText>{title}</ButtonText>
     </ButtonView>
   );
 };

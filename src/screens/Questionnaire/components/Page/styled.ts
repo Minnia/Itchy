@@ -4,7 +4,7 @@ import theme from '../../../../theme';
 
 export const QuestionTitle = styled(Text)`
   font-size: 20px;
-  color: white;
+  color: ${theme.secondary.color};
   font-weight: bold;
   text-align: center;
   font-family: ${theme.fonts.CorbenBold};

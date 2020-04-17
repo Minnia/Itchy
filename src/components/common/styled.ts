@@ -3,7 +3,7 @@ import theme from '../../theme';
 
 export const Paragraph = styled.Text`
   font-size: 16px;
-  color: white;
+  color: ${theme.secondary.color};
   font-weight: bold;
   text-align: center;
   font-family: ${theme.fonts.PoppinsBold};
