@@ -1,15 +1,15 @@
 import React, {useState, useEffect} from 'react';
-import Title from '../../components/common/Title';
+
 import form from '../../../questions.json';
 import {View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Page from './components/Page';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import {Paragraph} from '../../components/common/styled';
+import {Paragraph, Title} from '../../components/common/styled';
 import AnimatedBackground from './components/Page/AnimatedBackground';
 import layout from '../../theme/layout';
 
-const PageOneScreen = () => {
+const Questionnaire = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [hasFollowUpQuestion, setFollowUpQuestion] = useState(false);
   const [shouldShowFollowUpQuestion, setShowFollowUpQuestion] = useState(false);
@@ -53,7 +53,7 @@ const PageOneScreen = () => {
             position: 'absolute',
           }}>
           <View style={{height: layout.height, width: layout.width}}>
-            <Title title="Välmående DLQI" />
+            <Title>Välmående DLQI</Title>
             {shouldShowFollowUpQuestion ? (
               <>
                 <Page
@@ -92,4 +92,4 @@ const PageOneScreen = () => {
   );
 };
 
-export default PageOneScreen;
+export default Questionnaire;

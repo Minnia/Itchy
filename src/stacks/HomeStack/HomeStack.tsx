@@ -1,16 +1,16 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {screens} from '../../navigation/navigationConstants';
-import PageTwoScreen from '../../screens/Questionnaire';
-import PageOneScreen from '../../screens/Questionnaire';
+import Questionnaire from '../../screens/Questionnaire';
+
 const Stack = createStackNavigator();
 const HomeStack = () => {
   return (
-    <Stack.Navigator initialRouteName={screens.PageOneScreen}>
+    <Stack.Navigator initialRouteName={screens.Questionnaire}>
       <Stack.Screen
         options={{headerShown: false}}
-        name={screens.PageOneScreen}
-        component={PageOneScreen}
+        name={screens.Questionnaire}
+        component={Questionnaire}
       />
     </Stack.Navigator>
   );

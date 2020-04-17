@@ -1,6 +1,5 @@
 export const screens = {
-  PageOneScreen: 'PageOneScreen',
-  PageTwoScreen: 'PageTwoScreen',
+  Questionnaire: 'PageOneScreen',
 };
 
 export const stacks = {

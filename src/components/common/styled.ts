@@ -8,3 +8,12 @@ export const Paragraph = styled.Text`
   text-align: center;
   font-family: ${theme.fonts.PoppinsBold};
 `;
+
+export const Title = styled.Text`
+  font-size: 15px;
+  font-weight: bold;
+  color: ${theme.secondary.color};
+  text-align: center;
+  margin-bottom: 8px;
+  font-family: ${theme.fonts.PoppinsBold};
+`;

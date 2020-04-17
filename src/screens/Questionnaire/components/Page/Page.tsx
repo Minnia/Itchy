@@ -2,11 +2,10 @@ import React, {FunctionComponent} from 'react';
 import {Paragraph} from '../../../../components/common/styled';
 import {QuestionTitle} from './styled';
 import Button from '../../../../components/common/Button';
-import {View, Dimensions} from 'react-native';
+import {View} from 'react-native';
 import {store} from '../../../../redux/store';
 import * as actions from '../../../../redux/actions';
 import layout from '../../../../theme/layout';
-import theme from '../../../../theme';
 
 type Choice = {
   choice: string;
@@ -52,7 +51,7 @@ const Page: FunctionComponent<Props> = ({
 
             onPress(i);
           };
-          return <Button title={choice} onPress={submitAnswer} />;
+          return <Button title={choice} onPress={submitAnswer} key={i} />;
         })}
       </View>
     </>
