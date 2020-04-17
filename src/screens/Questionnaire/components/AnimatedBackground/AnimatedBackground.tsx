@@ -1,11 +1,11 @@
 import React, {FunctionComponent, useEffect} from 'react';
 import {useSelector} from 'react-redux';
 import {Animated, View} from 'react-native';
-import form from '../../../../../../questions.json';
-import {store} from '../../../../../redux/store';
-import * as actions from '../../../../../redux/actions';
-import layout from '../../../../../theme/layout';
-import theme from '../../../../../theme/index';
+import form from '../../../../../questions.json';
+import {store} from '../../../../redux/store';
+import * as actions from '../../../../redux/actions';
+import layout from '../../../../theme/layout';
+import theme from '../../../../theme/index';
 
 type OwnProps = {
   activeIndex: number;

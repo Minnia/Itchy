@@ -6,7 +6,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import Page from './components/Page';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {Paragraph, Title} from '../../components/common/styled';
-import AnimatedBackground from './components/Page/AnimatedBackground';
+import AnimatedBackground from './components/AnimatedBackground';
 import layout from '../../theme/layout';
 
 const Questionnaire = () => {
