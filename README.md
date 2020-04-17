@@ -6,9 +6,9 @@
 
 ## What does it look like?
 
-![image](/assets/png/Question1.png)
-![image](/assets/png/Question3.png)
-![image](/assets/png/SplashScreen.png)
+![image](/screenshots/Question1.png)
+![image](/screenshots/Question3.png)
+![image](/screenshots/SplashScreen.png)
 
 ## How do I start it?
 
